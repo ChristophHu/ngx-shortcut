@@ -1,0 +1,35 @@
+{
+  "name": "@christophhu/ngx-shortcut",
+  "version": "20.3.0",
+  "description": "Library for Angular to create keyboard shortcut hints and manage keyboard shortcuts.",
+  "license": "MIT",
+  "author": {
+    "name": "Christoph Huschenhoefer",
+    "email": "christoph@nxt.codes"
+  },
+  "keywords": [
+    "angular",
+    "keyboard",
+    "shortcut",
+    "hotkey"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christophhu/ngx-shortcut.git"
+  },
+  "bugs": {
+    "url": "https://github.com/christophhu/ngx-shortcut/issues"
+  },
+  "homepage": "https://github.com/christophhu/ngx-shortcut#readme",
+  "peerDependencies": {
+    "@angular/common": "^20.3.0",
+    "@angular/core": "^20.3.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

@@ -18,6 +18,5 @@ export class App implements OnInit {
   
   ngOnInit(): void {
     this.shortcutService.addShortcut({ keys: ["Shift", "a", "b"], cb: () => { console.log("Shortcut Shift + A + B triggered!")} });
-  }
-  
+  }  
 }
