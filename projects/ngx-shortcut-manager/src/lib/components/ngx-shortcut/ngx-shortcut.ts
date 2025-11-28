@@ -12,7 +12,7 @@ import { Component, Input } from '@angular/core';
 })
 export class NgxShortcut {
   @Input() keys: string[] = []
-  @Input() separator: string = '+'
+  @Input() separator: string = ''
   @Input() useSymbols: boolean = true
 
   private keySymbols: { [key: string]: string } = {
