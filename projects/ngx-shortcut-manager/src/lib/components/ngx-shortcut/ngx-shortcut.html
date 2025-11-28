@@ -1,6 +1,6 @@
 <div class="inline-flex items-center gap-1">
     @for (key of keys; track $index; let last = $last) {
-        <div class="shortcut-text h-8 w-8 p-1 bg-borderline text-center rounded">
+        <div class="shortcut-text grid place-items-center bg-borderline rounded">
             @if (useSymbols) {
                 @switch (key) {
                     @case ('Apple') {
