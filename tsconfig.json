@@ -8,8 +8,8 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "paths": {
-      "ngx-shortcut-manager": [
-        "./dist/ngx-shortcut-manager"
+      "ngx-shortcut": [
+        "./dist/ngx-shortcut"
       ]
     },
     "noFallthroughCasesInSwitch": true,
@@ -36,10 +36,10 @@
       "path": "./projects/demo/tsconfig.spec.json"
     },
     {
-      "path": "./projects/ngx-shortcut-manager/tsconfig.lib.json"
+      "path": "./projects/ngx-shortcut/tsconfig.lib.json"
     },
     {
-      "path": "./projects/ngx-shortcut-manager/tsconfig.spec.json"
+      "path": "./projects/ngx-shortcut/tsconfig.spec.json"
     }
   ]
 }

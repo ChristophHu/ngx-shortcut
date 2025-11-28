@@ -5,7 +5,7 @@ import { combineLatest, distinctUntilChanged, filter, fromEvent, map, merge, Obs
 @Injectable({
   providedIn: 'root',
 })
-export class NgxShortcutManager {
+export class NgxShortcutService {
   shortcuts: Shortcut[] = [
     // { keys: ["Shift", "r", "x"], cb: () => { console.log("RxJS is cool!")} },
   ]

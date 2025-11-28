@@ -1,6 +1,6 @@
-# ngx-shortcut-manager
+# ngx-shortcut
 
-**ngx-shortcut-manager** is an Angular service for managing keyboard shortcuts in scalable web applications. It provides a simple API to register, remove, and clear shortcuts, and triggers callbacks when defined key combinations are pressed.
+**ngx-shortcut** is an Angular service for managing keyboard shortcuts in scalable web applications. It provides a simple API to register, remove, and clear shortcuts, and triggers callbacks when defined key combinations are pressed.
 
 ## Features
 
@@ -13,7 +13,7 @@
 ## Installation
 
 ```bash
-npm install ngx-shortcut-manager
+npm install ngx-shortcut
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ The service is provided in root by default. Inject it using Angular's `inject()`
 
 ```typescript
 import { Component, OnInit, inject } from '@angular/core';
-import { NgxShortcutManager } from 'ngx-shortcut-manager';
+import { NgxShortcut } from 'ngx-shortcut';
 
 @Component({
   selector: 'app-root',
@@ -32,10 +32,10 @@ import { NgxShortcutManager } from 'ngx-shortcut-manager';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class App implements OnInit {
-  private readonly shortcutManager = inject(NgxShortcutManager);
+  private readonly shortcut = inject(NgxShortcut);
 
   ngOnInit(): void {
-    this.shortcutManager.addShortcut({
+    this.shortcut.addShortcut({
       keys: ['Shift', 'A', 'B'],
       cb: () => { console.log('Shortcut Shift + A + B triggered!'); }
     });
@@ -46,7 +46,7 @@ export class App implements OnInit {
 ### 2. Register Shortcuts
 
 ```typescript
-shortcutManager.addShortcut({
+shortcut.addShortcut({
   keys: ['Control', 'S'],
   cb: () => { /* Save logic */ }
 });
@@ -55,8 +55,8 @@ shortcutManager.addShortcut({
 ### 3. Remove or Clear Shortcuts
 
 ```typescript
-shortcutManager.removeShortcut(myShortcut);
-shortcutManager.clearShortcuts();
+shortcut.removeShortcut(myShortcut);
+shortcut.clearShortcuts();
 ```
 
 ## API

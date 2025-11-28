@@ -87,20 +87,20 @@
         }
       }
     },
-    "ngx-shortcut-manager": {
+    "ngx-shortcut": {
       "projectType": "library",
-      "root": "projects/ngx-shortcut-manager",
-      "sourceRoot": "projects/ngx-shortcut-manager/src",
+      "root": "projects/ngx-shortcut",
+      "sourceRoot": "projects/ngx-shortcut/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngx-shortcut-manager/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-shortcut/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ngx-shortcut-manager/tsconfig.lib.json"
+              "tsConfig": "projects/ngx-shortcut/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -108,7 +108,7 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "tsConfig": "projects/ngx-shortcut-manager/tsconfig.spec.json"
+            "tsConfig": "projects/ngx-shortcut/tsconfig.spec.json"
           }
         }
       }

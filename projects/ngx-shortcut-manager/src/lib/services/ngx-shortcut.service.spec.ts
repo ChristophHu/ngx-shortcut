@@ -1,16 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 import { provideZonelessChangeDetection } from '@angular/core';
-import { NgxShortcutManager } from './ngx-shortcut-manager';
+import { NgxShortcutService } from './ngx-shortcut.service';
 import { Shortcut } from '../models/shortcut.type';
 
-describe('NgxShortcutManager (zoneless)', () => {
-  let service: NgxShortcutManager;
+describe('NgxShortcutService (zoneless)', () => {
+  let service: NgxShortcutService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [provideZonelessChangeDetection()]
     });
-    service = TestBed.inject(NgxShortcutManager);
+    service = TestBed.inject(NgxShortcutService);
     service.clearShortcuts();
   });
 
