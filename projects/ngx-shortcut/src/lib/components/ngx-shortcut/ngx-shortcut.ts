@@ -24,7 +24,6 @@ export class NgxShortcut {
 
   constructor() {
     effect(() => {
-      console.log('Registering shortcut:', this.keys())
       const keysValue = this.keys()
       if (Array.isArray(keysValue) && keysValue.length > 0) {
         this.shortcutService.addShortcut({

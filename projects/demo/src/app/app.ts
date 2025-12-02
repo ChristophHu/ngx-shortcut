@@ -21,6 +21,6 @@ export class App implements OnInit {
   }
   
   freshCb() {
-    console.log("Shortcut Shift + A + Y triggered!");
+    console.log("Shortcut Shift + A + X triggered!");
   }
 }

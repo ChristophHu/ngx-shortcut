@@ -31,9 +31,34 @@ import { NgxDatatableModule } from '@christophhu/ngx-shortcut';
 ```
 
 Then, you can use the `<ngx-shortcut>` component in your templates.
-
+There are several options available to customize the shortcut display und functionality:
 ```html
-<ngx-shortcut [keys]="['Ctrl', 'S']" [useSymbols]="true"></ngx-shortcut>
+<ngx-shortcut [keys]="['Space', 'Apple', 'b']" [useSymbols]="true"></ngx-shortcut>
+
+<ngx-shortcut [keys]="['Shift', 'A', 'B']" [useSymbols]="true" [separator]="'+'"></ngx-shortcut>
+
+<ngx-shortcut [keys]="['Shift', 'A', 'X']" [useSymbols]="true" [separator]="'-'" [cb]="freshCb"></ngx-shortcut>
+```
+
+Shortcuts without callback will only display the shortcut, while those with a callback will also execute the provided function when the shortcut is triggered.
+To define a callback function, you can add it to your component like this:
+
+```typescript
+freshCb() {
+  alert('Shortcut activated!')
+}
+```
+
+You can add shortcuts by using the `NgxShortcutService` in your component:
+
+```typescript
+import { NgxShortcutService } from '@christophhu/ngx-shortcut'
+...
+private readonly ngxShortcutService = inject(NgxShortcutService)
+
+ngOnInit(): void {
+  this.ngxShortcutService.addShortcut({ keys: ["Shift", "a", "b"], cb: () => { console.log("Shortcut Shift + A + B triggered!")} })
+}
 ```
 
 ## License

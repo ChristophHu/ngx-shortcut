@@ -11,10 +11,8 @@ export class NgxShortcutService {
   ]
 
   public addShortcut(shortcut: Shortcut | Shortcut[]) {
-    console.log('Adding shortcut(s):', shortcut);
     const addAndWatch = (s: Shortcut) => {
       this.shortcuts.push(s)
-      console.log('Current shortcuts:', this.shortcuts);
       this.hotkey(s)
     }
     if (Array.isArray(shortcut)) {
