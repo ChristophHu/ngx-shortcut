@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Shortcut } from '../models/shortcut.type';
-import { combineLatest, distinctUntilChanged, filter, fromEvent, map, merge, Observable } from 'rxjs';
+import { Injectable } from '@angular/core'
+import { Shortcut } from '../models/shortcut.type'
+import { combineLatest, distinctUntilChanged, filter, fromEvent, map, merge, Observable } from 'rxjs'
 
 @Injectable({
   providedIn: 'root',
@@ -47,13 +47,13 @@ export class NgxShortcutService {
       );
 
     const keysState$ForKeys = (keys: string[]) =>
-      combineLatest(keys.map(keyState$ForKey));
+      combineLatest(keys.map(keyState$ForKey))
 
     keysState$ForKeys(shortcut.keys)
       .pipe(
         distinctUntilChanged((prev, cur) => JSON.stringify(prev) === JSON.stringify(cur)),
         filter((keysState) => keysState.every(Boolean))
       )
-      .subscribe(shortcut.cb);
+      .subscribe(shortcut.cb)
   }
 }
